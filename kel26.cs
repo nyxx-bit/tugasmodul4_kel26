@@ -6,7 +6,8 @@ namespace kel26
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("tes123");    
+      Console.WriteLine("tes123");
+            Console.WriteLine("P");
     }
   }
 }
