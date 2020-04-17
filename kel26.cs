@@ -8,6 +8,7 @@ namespace kel26
     {
       Console.WriteLine("tes123");
             Console.WriteLine("P");
+            Console.WriteLine("Testtt");
     }
   }
 }
