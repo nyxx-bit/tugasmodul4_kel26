@@ -2,7 +2,7 @@
 
 public static class kel26
 {
-	public static int transaksi(int[] jumlah, int b)
+	static int transaksi(int[] jumlah, int b)
 	{
 		int hasil = 0;
 
@@ -13,7 +13,7 @@ public static class kel26
 		return hasil;
 	}
 
-	static int Main()
+	static void Main(string[] args)
 	{
 		int[] jumlah = new int[5];
 		int[] harga = { 500000, 700000, 800000 };
@@ -27,22 +27,23 @@ public static class kel26
 		char lanjut;
 
 		b = 0;
-
-		Console.Write("tekan 1. untuk membeli puma");
+		Console.WriteLine("======================  Selamat Datang di Toko Sepatu Aegis  ======================\n");
+		Console.WriteLine("Silahkan Pilih Sepatu yang Ingin Dibeli");
+		Console.Write("1. Puma");
 		Console.Write("\n");
-		Console.Write("tekan 2. untuk membeli adidas");
+		Console.Write("2. Adidas");
 		Console.Write("\n");
-		Console.Write("tekan 3. untuk membeli nike");
+		Console.Write("3. Nike");
 		Console.Write("\n");
 
 		for (a = 0; a < 5; a++)
 		{
-			Console.Write("masukkan pilihan ");
+			Console.Write("Masukkan Pilihan : ");
 			pilihan = Convert.ToInt32(Console.ReadLine());
 			switch (pilihan)
 			{
 				case 1:
-					Console.Write("masukkan jumlah sepatu puma yang dibeli ");
+					Console.Write("Masukkan Jumlah Sepatu yang Ingin Dibeli : ");
 					c = Convert.ToInt32(Console.ReadLine());
 					count[a] = c;
 					jumlah[a] = c * harga[a];
@@ -50,7 +51,7 @@ public static class kel26
 					break;
 
 				case 2:
-					Console.Write("masukkan jumlah sepatu adidas yang dibeli ");
+					Console.Write("Masukkan Jumlah Sepatu yang Ingin Dibeli : ");
 					c = Convert.ToInt32(Console.ReadLine());
 					count[a] = c;
 					jumlah[a] = c * harga[a];
@@ -58,7 +59,7 @@ public static class kel26
 					break;
 
 				case 3:
-					Console.Write("masukkan jumlah sepatu adidas yang dibeli ");
+					Console.Write("Masukkan Jumlah Sepatu yang Ingin Dibeli : ");
 					c = Convert.ToInt32(Console.ReadLine());
 					count[a] = c;
 					jumlah[a] = c * harga[a];
@@ -66,13 +67,13 @@ public static class kel26
 					break;
 
 				default:
-					Console.Write("inputan anda salah");
+					Console.Write("Inputan Anda Salah");
 					break;
 			}
 			b = b + 1;
 			Console.Write("\n");
-			Console.Write("ingin menambah transaksi [y/t]");
-			lanjut = Char.TryParse(0;
+			Console.Write("Ingin Menambah Transaksi [y/t] ? ");
+			lanjut = Convert.ToChar(Console.ReadLine());
 			Console.Write("\n");
 
 			if (lanjut == 't')
@@ -82,54 +83,51 @@ public static class kel26
 		}
 		for (a = 0; a < b; a++)
 		{
-			Console.Write("nama barang : ");
+			Console.Write("Nama Barang : ");
 
 			if (pin[a] == 1)
 			{
-				Console.Write("puma");
+				Console.Write("Puma");
 			}
 			else if (pin[a] == 2)
 			{
-				Console.Write("adidas");
+				Console.Write("Adidas");
 			}
 			else
 			{
-				Console.Write("nike");
+				Console.Write("Nike");
 			}
 
-			Console.Write(" jumlah : ");
-			Console.Write(count[a]);
-			Console.Write(" harga : ");
-			Console.Write(harga[a]);
-			Console.Write(" total : ");
-			Console.Write(jumlah[a]);
-			Console.Write(" ");
+			Console.Write("\nJumlah : ");
+			Console.WriteLine(count[a]);
+			Console.Write("Harga : ");
+			Console.WriteLine(harga[a]);
+			Console.Write("Total : ");
+			Console.WriteLine(jumlah[a]);
 			Console.Write("\n");
 		}
 
 		int total = transaksi(jumlah, b);
-		Console.Write("anda belanja sebesar Rp. ");
+		Console.Write("Anda Belanja Sebesar Rp.");
 		Console.Write(total);
-		Console.Write(" rupiah");
 		Console.Write("\n");
 
-		Console.Write("anda bayar ");
+		Console.Write("Anda Bayar : ");
 		bayar = Convert.ToInt32(Console.ReadLine());
 
 		if (bayar < total)
 		{
-			Console.Write("uang anda kurang");
+			Console.Write("Uang Anda Kurang");
 		}
 		else
 		{
-			Console.Write("uang kembalian anda sebesar Rp. ");
+			Console.Write("Uang Kembalian Anda Sebesar Rp.");
 			Console.Write(bayar - total);
-			Console.Write(" rupiah");
 			Console.Write("\n");
 			Console.Write("\n");
-			Console.Write("======================  trimakasih telah belanja di toko kami  ==================================");
+			Console.Write("===================  Terima Kasih Telah Berbelanja di Toko Kami  ===================");
 		}
-		Console.ReadKey(true);
+		Console.ReadKey();
 	}
 
 }
